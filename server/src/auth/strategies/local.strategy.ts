@@ -6,6 +6,7 @@ import { AuthService } from '../auth.service';
 @Injectable()
 export class LocalStrategy extends PassportStrategy(Strategy) {
   constructor(private authService: AuthService) {
+    //Starndart was useer for encryption but we can use usernameField for select email
     super({ usernameField: 'email' });
   }
 
